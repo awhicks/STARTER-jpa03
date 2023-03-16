@@ -82,11 +82,11 @@ export default function AppNavbar({ currentUser, systemInfo, doLogout, currentUr
               {
                 currentUser && currentUser.loggedIn ? (
                   <>
-                    <Navbar.Text className="me-3" as={Link} to="/profile">Welcome, {currentUser.root.user.email}</Navbar.Text>
+                    <Navbar.Text className="me-3" as={Link} to="/profile">Welcome, {currentUser.root.user.login}</Navbar.Text>
                     <Button onClick={doLogout}>Log Out</Button>
                   </>
                 ) : (
-                  <Button href="/oauth2/authorization/google">Log In</Button>
+                  <Button href="/oauth2/authorization/github">Log In</Button>
                 )
               }
             </Nav>

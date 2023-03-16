@@ -29,12 +29,11 @@ public class MockCurrentUserServiceImpl extends CurrentUserServiceImpl {
     Object principal = authentication.getPrincipal();
 
     String googleSub = "fakeUser";
-    String email = "user@example.org";
+    String login = "user@example.org";
     String pictureUrl = "https://example.org/fake.jpg";
     String fullName = "Fake User";
     String givenName = "Fake";
     String familyName = "User";
-    boolean emailVerified = true;
     String locale="";
     String hostedDomain="example.org";
     boolean admin=false;
@@ -46,12 +45,11 @@ public class MockCurrentUserServiceImpl extends CurrentUserServiceImpl {
       log.info("principal instance of org.springframework.security.core.userdetails.User");
       user = (org.springframework.security.core.userdetails.User) principal;
       googleSub = "fake_" + user.getUsername();
-      email = user.getUsername() + "@example.org";
+      login = user.getUsername() + "@example.org";
       pictureUrl = "https://example.org/" +  user.getUsername() + ".jpg";
       fullName = "Fake " + user.getUsername();
       givenName = "Fake";
       familyName = user.getUsername();
-      emailVerified = true;
       locale="";
       hostedDomain="example.org";
       admin= (user.getUsername().equals("admin"));
@@ -59,18 +57,17 @@ public class MockCurrentUserServiceImpl extends CurrentUserServiceImpl {
 
     User u = User.builder()
     .googleSub(googleSub)
-    .email(email)
+    .login(login)
     .pictureUrl(pictureUrl)
     .fullName(fullName)
     .givenName(givenName)
     .familyName(familyName)
-    .emailVerified(emailVerified)
     .locale(locale)
     .hostedDomain(hostedDomain)
     .admin(admin)
     .id(1L)
     .build();
-    
+
     log.info("************** ALERT **********************");
     log.info("************* MOCK USER********************");
     log.info("authentication={}",authentication);

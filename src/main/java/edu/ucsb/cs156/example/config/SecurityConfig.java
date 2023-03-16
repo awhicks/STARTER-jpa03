@@ -41,8 +41,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-  @Value("${app.admin.emails}")
-  private final List<String> adminEmails = new ArrayList<String>();
+  @Value("${app.admin.github}")
+  private final List<String> adminGithub = new ArrayList<String>();
 
   @Autowired
   UserRepository userRepository;
@@ -80,14 +80,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
           Map<String, Object> userAttributes = oauth2UserAuthority.getAttributes();
           log.info("********** userAttributes={}", userAttributes);
 
-          String email = (String) userAttributes.get("email");
-          if (isAdmin(email)) {
+          String login = (String) userAttributes.get("login");
+          if (isAdmin(login)) {
             mappedAuthorities.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
-          }
-
-          if (email.endsWith("@ucsb.edu")) {
+          } else {
             mappedAuthorities.add(new SimpleGrantedAuthority("ROLE_MEMBER"));
           }
+
         }
 
       });
@@ -95,11 +94,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     };
   }
 
-  public boolean isAdmin(String email) {
-    if (adminEmails.contains(email)) {
+  public boolean isAdmin(String login) {
+    if (adminGithub.contains(login)) {
       return true;
     }
-    Optional<User> u = userRepository.findByEmail(email);
+    Optional<User> u = userRepository.findByLogin(login);
     return u.isPresent() && u.get().isAdmin();
   }
 }

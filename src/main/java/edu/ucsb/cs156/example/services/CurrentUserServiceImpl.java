@@ -30,8 +30,8 @@ public class CurrentUserServiceImpl extends CurrentUserService {
   @Autowired
   GrantedAuthoritiesService grantedAuthoritiesService;
 
-  @Value("${app.admin.emails}")
-  final private List<String> adminEmails = new ArrayList<String>();
+  @Value("${app.admin.github}")
+  final private List<String> adminGithub = new ArrayList<String>();
 
   public CurrentUser getCurrentUser() {
     CurrentUser cu = CurrentUser.builder()
@@ -42,26 +42,25 @@ public class CurrentUserServiceImpl extends CurrentUserService {
     return cu;
   }
 
-  
+
   public User getOAuth2AuthenticatedUser(SecurityContext securityContext, Authentication authentication) {
     OAuth2User oAuthUser = ((OAuth2AuthenticationToken) authentication).getPrincipal();
-    String email = oAuthUser.getAttribute("email");
+    String login = oAuthUser.getAttribute("login");
     String googleSub = oAuthUser.getAttribute("sub");
     String pictureUrl = oAuthUser.getAttribute("picture");
     String fullName = oAuthUser.getAttribute("name");
     String givenName = oAuthUser.getAttribute("given_name");
     String familyName = oAuthUser.getAttribute("family_name");
-    boolean emailVerified = oAuthUser.getAttribute("email_verified");
     String locale = oAuthUser.getAttribute("locale");
     String hostedDomain = oAuthUser.getAttribute("hd");
 
     java.util.Map<java.lang.String,java.lang.Object> attrs = oAuthUser.getAttributes();
     log.info("attrs={}",attrs);
 
-    Optional<User> ou = userRepository.findByEmail(email);
+    Optional<User> ou = userRepository.findByLogin(login);
     if (ou.isPresent()) {
       User u = ou.get();
-      if (adminEmails.contains(email) && !u.isAdmin()) {
+      if (adminGithub.contains(login) && !u.isAdmin()) {
         u.setAdmin(true);
         userRepository.save(u);
       }
@@ -70,15 +69,14 @@ public class CurrentUserServiceImpl extends CurrentUserService {
 
     User u = User.builder()
         .googleSub(googleSub)
-        .email(email)
+        .login(login)
         .pictureUrl(pictureUrl)
         .fullName(fullName)
         .givenName(givenName)
         .familyName(familyName)
-        .emailVerified(emailVerified)
         .locale(locale)
         .hostedDomain(hostedDomain)
-        .admin(adminEmails.contains(email))
+        .admin(adminGithub.contains(login))
         .build();
     userRepository.save(u);
     return u;

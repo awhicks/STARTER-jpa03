@@ -21,9 +21,9 @@ describe("UserTable tests", () => {
         const { getByText, getByTestId } = render(
           <UsersTable users={usersFixtures.threeUsers}/>
         );
-    
-        const expectedHeaders = ["id", "First Name", "Last Name", "Email", "Admin"];
-        const expectedFields = ["id", "givenName", "familyName", "email", "admin"];
+
+        const expectedHeaders = ["id", "First Name", "Last Name", "Login", "Admin"];
+        const expectedFields = ["id", "givenName", "familyName", "login", "admin"];
         const testId = "UsersTable";
 
         expectedHeaders.forEach( (headerText)=> {

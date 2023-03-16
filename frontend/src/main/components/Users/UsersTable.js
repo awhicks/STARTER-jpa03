@@ -15,8 +15,8 @@ const columns = [
         accessor: 'familyName',
     },
     {
-        Header: 'Email',
-        accessor: 'email',
+        Header: 'Login',
+        accessor: 'login',
     },
     {
         Header: 'Admin',

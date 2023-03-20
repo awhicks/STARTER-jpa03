@@ -14,7 +14,7 @@ a few *secrets* on the GitHub repo settings page.
 Here are the secrets you need to create:
 
 
-| Secret Name | Value | 
+| Secret Name | Value |
 |-|-|
 | `DOCS_TOKEN` | This value is a personal access token that allows the Github Actions script to publish the Storybook for this repo to the separate GitHub Pages repos. To obtain a value for this token, please refer to the instructions below.  |
 | `CODECOV_TOKEN` | This value is a token that allows you to publish test code coverage statistics for your project to the website <https://codecov.io>.  To obtain a value for this token, please refer to the instructions below.  |
@@ -38,18 +38,18 @@ of potential technical debt.
 To get started, you'll need to do two things first:
 
 * If you haven't yet obtained the GitHub Student Developer Pack, please
-  visit <https://education.github.com>, login with your GitHub credentials, 
+  visit <https://education.github.com>, login with your GitHub credentials,
   and go through the process of registering for the GitHub Student Developer Pack.  Free access to some of the paid features of Codecov.io is part of
   this pack.
 * Once you have verified that you have access to the GitHub Student Developer Pack, login to the website <https://codecov.io> using your GitHub credentials.
 * Once you log in, assuming that you are already of the course organization
-  for CS156, you should see the name of that organization (e.g. `ucsb-cs156-f20`). Note that the quarter may be different depending on when you are reading these instructions--navigate to the organization for the current quarter.
-  
+  for CS3704, you should see the name of that organization (e.g. `CS-3704-Spring-2023`).
+
   You should then be able to navigate to a link for your own repo.
-  
-  If you do NOT see your organization or repo, you can also try just 
+
+  If you do NOT see your organization or repo, you can also try just
   putting in a URL directly that has the following form, replacing `ORG-NAME`
-  with the name of your class organization e.g. `ucsb-cs156-f20` and
+  with the name of your class organization e.g. `CS-3704-Spring-2023` and
   `REPO-NAME` with the name of your repo.
 
   ```
@@ -66,7 +66,7 @@ To get started, you'll need to do two things first:
 # Adjusting the Code Coverage Badge
 
 Many repos have a "badge" at the top of their README.md file that serves
-two purposes: it shows the current level of code coverage, and it's a 
+two purposes: it shows the current level of code coverage, and it's a
 link to the code coverage report.
 
 On the same Settings page where you got the token, if you look at the left, there is a navigation option for "Badge". You can copy/paste that Markdown

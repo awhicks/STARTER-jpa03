@@ -17,13 +17,13 @@ This is both good and bad; the key thing is to be aware of this.
 
 # The H2 Console
 
-* On localhost only: <http://localhost:8080/h2-console>  
+* On localhost only: <http://localhost:8080/h2-console>
 
 It isn't necessarily a course goal for you to become fully proficient in SQL (Structured Query Language, the language used to manipulate databases.)
 
 But a little SQL can go a long way, and it can sometimes be helpful to peek under the hood at the database to see what's going on.
 
-When running on localhost, an H2-Console can be accessed from the menu bar.  
+When running on localhost, an H2-Console can be accessed from the menu bar.
 
 <img alt="H2-Console button" img="https://user-images.githubusercontent.com/1119017/150202561-c945edc9-ec67-4d13-aa20-029521905ef2.png" width="200" />
 
@@ -39,8 +39,8 @@ spring.datasource.username=sa
 spring.datasource.password=password`
 ```
 
-Note that the value `password` for a password is of course a terrible choice; but keep in mind that this is only for localhost testing, 
-which is by definition not avaiable on the public internet, so security here is not a primary concern.  When deploying on Heroku, an entirely
+Note that the value `password` for a password is of course a terrible choice; but keep in mind that this is only for localhost testing,
+which is by definition not avaiable on the public internet, so security here is not a primary concern.  When deploying on Render, an entirely
 different database system and password management system is in place.
 
 Once you enter the username and password and press Connect, you may see a warning like this about the password `password`, which is probably fine to ignore.

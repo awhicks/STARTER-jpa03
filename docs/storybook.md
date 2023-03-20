@@ -7,7 +7,7 @@ This file describes the one-time setup steps necessary to get that working.
 
 ## Setting up a Personal Access Token for GitHub Actions
 
-The GitHub actions script to deploy the Storybook to QA requires that a repository secret called `DOCS_TOKEN` be set up; this should be an access token for the repository.   This secret can be obtained by visiting the settings page for either the organization, or a user with access to the organization, visiting Developer Settings, and then Personal Access Tokens. 
+The GitHub actions script to deploy the Storybook to QA requires that a repository secret called `DOCS_TOKEN` be set up; this should be an access token for the repository.   This secret can be obtained by visiting the settings page for either the organization, or a user with access to the organization, visiting Developer Settings, and then Personal Access Tokens.
 
 ![image](https://user-images.githubusercontent.com/1119017/147836507-0190801c-ce94-4e5a-9abe-6a1d2d0455af.png)
 
@@ -30,26 +30,26 @@ There is a GitHub Action that should set these up for you, provided that the per
 
 1. Visit this repos's page on GitHub
 2. You should see a tab for Actions like this (`Actions` is fourth from the left, after `Pull Requests`)
- 
+
    <img width="988" alt="image" src="https://user-images.githubusercontent.com/1119017/163041904-af830ecc-8530-4cf6-be18-78a16c3d30d9.png">
-  
+
    If there is no `Actions` tab, go under `Settings` and enable it, like this (note that `Actions` is in the left-navigation)
-  
+
    <img width="1158" alt="image" src="https://user-images.githubusercontent.com/1119017/163042157-75863770-b595-4ed1-842c-ec390cc402f2.png">
 3. Click on the Actions tab, and you should see this:
    <img width="1326" alt="image" src="https://user-images.githubusercontent.com/1119017/163042423-526da9fc-3307-4151-a555-a11d28d0c984.png">
 4. Click on the top action, and you should see the title: `00-publish-docs-to-github-pages-setup: set up -docs and -docs-qa repos (run once, manually)`
-   
+
    Like this:
    <img width="1275" alt="image" src="https://user-images.githubusercontent.com/1119017/163042524-7453ea9b-3ad4-483c-8cf9-8a84b86f75f8.png">
 
-   Click where it says: `Run Workflow` at the right, and you should see a dropdown like this with a Green `Run Workflow` button.  
+   Click where it says: `Run Workflow` at the right, and you should see a dropdown like this with a Green `Run Workflow` button.
    Click that button.
-   
+
    <img width="413" alt="image" src="https://user-images.githubusercontent.com/1119017/163042648-ac93f982-8e43-4bcf-8b17-69ac81892a67.png">
 
    After clicking, wait a few seconds; don't click again immediately. It takes 5-10 seconds for the screen to update.
-  
+
    Then you should see something like this:
 
    <img width="965" alt="image" src="https://user-images.githubusercontent.com/1119017/163042766-f075a540-6ed1-4eb7-86a0-129a8a7171fc.png">
@@ -94,8 +94,8 @@ Finally, at the top of the README.md there shoudl be two links for the Storybook
 ```
 Storybook is here:
 
-Production: https://ucsb-cs156-w22.github.io/demo-spring-react-example-docs/
-QA: https://ucsb-cs156-w22.github.io/demo-spring-react-example-docs-qa/
+Production: https://awhicks.github.io/STARTER-jpa03-docs/
+QA: https://awhicks.github.io/STARTER-jpa03-docs-qa/
 ```
 
 Each of the URLs has this form:

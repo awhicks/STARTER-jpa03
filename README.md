@@ -1,8 +1,8 @@
 # demo-spring-react-example-v2: dsre-v2
 
 Storybook is here:
-* Production: <https://ucsb-cs156-f22.github.io/STARTER-jpa03-docs/>
-* QA:  <https://ucsb-cs156-f22.github.io/STARTER-jpa03-docs-qa/>
+* Production: <https://awhicks.github.io/STARTER-jpa03-docs/>
+* QA:  <https://awhicks.github.io/STARTER-jpa03-docs-qa/>
 
 The GitHub actions script to deploy the Storybook to QA requires some configuration; see [docs/github-actions.md](docs/github-actions.md) for details.
 
@@ -13,16 +13,16 @@ If these repos are not yet setup, see the setup steps in [`docs/storybook.md`](d
 Before running the application for the first time,
 you need to do the steps documented in [`docs/oauth.md`](docs/oauth.md).
 
-Otherwise, when you try to login for the first time, you 
+Otherwise, when you try to login for the first time, you
 will likely see an error such as:
 
 <img src="https://user-images.githubusercontent.com/1119017/149858436-c9baa238-a4f7-4c52-b995-0ed8bee97487.png" alt="Authorization Error; Error 401: invalid_client; The OAuth client was not found." width="400"/>
 
 # Getting Started on localhost
 
-* Open *two separate terminal windows*  
+* Open *two separate terminal windows*
 * In the first window, start up the backend with:
-  ``` 
+  ```
   mvn spring-boot:run
   ```
 * In the second window:
@@ -42,24 +42,14 @@ If you see the following on localhost, make sure that you also have the frontend
 Failed to connect to the frontend server... On Heroku, be sure that PRODUCTION is defined.  On localhost, open a second terminal window, cd into frontend and type: npm install; npm start";
 ```
 
-# Getting Started on Heroku
+# Getting Started on Render
 
-On Heroku, you'll need to set the following configuration variable:
+On Render, you'll need to set the following configuration variable:
 
-* Using the Heroku CLI:
-  ```
-  heroku config:set PRODUCTION=true --app <heroku app name>
-  ```
-* Or set it on the Heroku Dashboard:
-  ![image](https://user-images.githubusercontent.com/1119017/149855768-7b56164a-98f7-4357-b877-da34b7bd9ea4.png)
+* Env Vars
 
 You'll also need to follow the OAuth set up instructions here: [`docs/oauth.md`](docs/oauth.md).
 
-If you get the following message on Heroku, it probably means that you failed to setup the `PRODUCTION` environment variable.
-
-```
-Failed to connect to the frontend server... On Heroku, be sure that PRODUCTION is defined.  On localhost, open a second terminal window, cd into frontend and type: npm install; npm start";
-```
 
 # Accessing swagger
 
@@ -84,8 +74,3 @@ On localhost:
 * Each time you do `mvn clean` the database is completely rebuilt from scratch
 * You can access the database console via a special route, <http://localhost:8080/h2-console>
 * For more info, see [docs/h2-database.md](/docs/h2-database.md)
-
-On Heroku:
-* The SQL database is a postgres database provisioned automatically by Heroku
-* You can reset it with `heroku pg:reset --app app-name-goes-here`
-* More info and instructions for access the SQL prompt are at [docs/postgres-database.md](/docs/postgres-database.md)

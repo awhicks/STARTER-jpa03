@@ -9,7 +9,6 @@ const apiCurrentUserFixtures = {
             "givenName": "Phill",
             "familyName": "Conrad",
             "locale": "en",
-            "hostedDomain": "ucsb.edu",
             "admin": true
         },
         "roles": [
@@ -35,7 +34,6 @@ const apiCurrentUserFixtures = {
                     "picture": "https://lh3.googleusercontent.com/a/AATXAJyxrU2gDahCiNe4ampVZlv5176Jo0F0PG3KyYgk=s96-c",
                     "login": "phtcon@ucsb.edu",
                     "locale": "en",
-                    "hd": "ucsb.edu"
                 }
             },
             {

@@ -9,7 +9,6 @@ const usersFixtures = {
             "givenName": "Phill",
             "familyName": "Conrad",
             "locale": "en",
-            "hostedDomain": "ucsb.edu",
             "admin": true
         },
         {
@@ -21,7 +20,6 @@ const usersFixtures = {
             "givenName": "Phillip",
             "familyName": "Conrad",
             "locale": "en",
-            "hostedDomain": null,
             "admin": false
         },
         {
@@ -33,7 +31,6 @@ const usersFixtures = {
             "givenName": "Craig",
             "familyName": "Zzyxx",
             "locale": "en",
-            "hostedDomain": null,
             "admin": false
         }
     ]

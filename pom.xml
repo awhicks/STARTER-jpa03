@@ -8,7 +8,7 @@
         <version>2.6.3</version>
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
-    <groupId>edu.ucsb.cs156</groupId>
+    <groupId>edu.vt.cs3704</groupId>
     <artifactId>example</artifactId>
     <version>1.1.0</version>
     <name>example</name>
@@ -56,7 +56,6 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
-       
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
@@ -113,12 +112,12 @@
                 <version>0.8.7</version>
                 <configuration>
                     <excludes>
-                        <exclude>**/edu/ucsb/cs156/example/aop/LoggingAspect.*</exclude>
-                        <exclude>**/edu/ucsb/cs156/example/config/*</exclude>
-                        <exclude>**/edu/ucsb/cs156/example/controllers/FrontendController.*</exclude>
-                        <exclude>**/edu/ucsb/cs156/example/controllers/FrontendProxyController.*</exclude>
-                        <exclude>**/edu/ucsb/cs156/example/services/CurrentUserServiceImpl.*</exclude>
-                        <exclude>**/edu/ucsb/cs156/example/ExampleApplication.*</exclude>
+                        <exclude>**/edu/vt/cs3704/example/aop/LoggingAspect.*</exclude>
+                        <exclude>**/edu/vt/cs3704/example/config/*</exclude>
+                        <exclude>**/edu/vt/cs3704/example/controllers/FrontendController.*</exclude>
+                        <exclude>**/edu/vt/cs3704/example/controllers/FrontendProxyController.*</exclude>
+                        <exclude>**/edu/vt/cs3704/example/services/CurrentUserServiceImpl.*</exclude>
+                        <exclude>**/edu/vt/cs3704/example/ExampleApplication.*</exclude>
                     </excludes>
                 </configuration>
                 <executions>
@@ -151,20 +150,20 @@
                 <configuration>
                     <verbose>true</verbose>
                     <targetClasses>
-                        <param>edu.ucsb.cs156.*</param>
+                        <param>edu.vt.cs3704.*</param>
                     </targetClasses>
                     <targetTests>
-                        <param>edu.ucsb.cs156.*</param>
+                        <param>edu.vt.cs3704.*</param>
                     </targetTests>
                     <excludedClasses>
-                        <param>edu.ucsb.cs156.example.aop.LoggingAspect</param>
-                        <param>edu.ucsb.cs156.example.controllers.FrontendController</param>
-                        <param>edu.ucsb.cs156.example.controllers.FrontendProxyController</param>
-                        <param>edu.ucsb.cs156.example.services.CurrentUserServiceImpl</param>
-                        <param>edu.ucsb.cs156.example.ExampleApplication</param>
-                        <param>edu.ucsb.cs156.example.config.SecurityConfig</param>
-                        <param>edu.ucsb.cs156.example.config.SecurityConfig.MyCsrfRequestMatcher</param>
-                        <param>edu.ucsb.cs156.example.config.SpringFoxConfig</param>
+                        <param>edu.vt.cs3704.example.aop.LoggingAspect</param>
+                        <param>edu.vt.cs3704.example.controllers.FrontendController</param>
+                        <param>edu.vt.cs3704.example.controllers.FrontendProxyController</param>
+                        <param>edu.vt.cs3704.example.services.CurrentUserServiceImpl</param>
+                        <param>edu.vt.cs3704.example.ExampleApplication</param>
+                        <param>edu.vt.cs3704.example.config.SecurityConfig</param>
+                        <param>edu.vt.cs3704.example.config.SecurityConfig.MyCsrfRequestMatcher</param>
+                        <param>edu.vt.cs3704.example.config.SpringFoxConfig</param>
                     </excludedClasses>
                     <excludedTestClasses></excludedTestClasses>
                     <outputFormats>
@@ -218,7 +217,7 @@
                 </dependency>
             </dependencies>
         </profile>
-       
+
         <profile>
             <id>postgres</id>
              <activation>
@@ -230,7 +229,7 @@
                 <springProfiles>postgres</springProfiles>
             </properties>
         </profile>
-       
+
         <profile>
             <id>production</id>
             <activation>

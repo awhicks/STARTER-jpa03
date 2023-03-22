@@ -81,15 +81,15 @@ After copying, the file `.env` looks like this:
 ```
 GOOGLE_CLIENT_ID=see-instructions
 GOOGLE_CLIENT_SECRET=see-instructions
-ADMIN_EMAILS=phtcon@ucsb.edu
+ADMIN_GITHUB=awhicks
 ```
 
 Replace `see-instructions` with the appropriate values.
 
-For ADMIN_EMAILS, add your own email and any teammates you are collaborating with after phtcon.ucsb.edu; you can separate multiple emails with commas, e.g.
+For ADMIN_GITHUB, add your own GitHub account and any teammates you are collaborating with after awhicks; you can separate multiple emails with commas, e.g.
 
 ```
-ADMIN_EMAILS=phtcon@ucsb.edu,cgaucho@ucsb.edu,ldelplaya@ucsb.edu
+ADMIN_GITHUB=awhicks,awh4kc
 ```
 
 With this done, you should be all set to run on localhost.
@@ -113,7 +113,7 @@ The easy way, using the Heroku CLI:
     You should get output like this:
 
     ```
-    Setting GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, ADMIN_EMAILS and restarting ⬢ demo-spring-react-example... done, v6
+    Setting GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, ADMIN_GITHUB and restarting ⬢ demo-spring-react-example... done, v6
     ```
 
     You can check the values by visiting the `Settings` tab

@@ -1,4 +1,4 @@
-# demo-spring-react-example-v2: dsre-v2
+# STARTER-jpa03
 
 Storybook is here:
 * Production: <https://awhicks.github.io/STARTER-jpa03-docs/>
@@ -240,6 +240,7 @@ Then, **and this is super important**, please make both of those URLs **clickabl
 * (20 pts) Basic Logistics
   - Having a repo with the correct name in the correct organization with the starter code for this lab
   - The links on Canvas are clickable links (to make it easier to test your app)
+  - Information of how you are communicating within your group (slack, discord, groupme, etc)
   - README has a link to your repo.
 * (20 pts) Having a running web app at <tt>https://CS-3704-S23-githubusername.onrender.com</tt>
 * (20 pts) Running web app has the ability to login with OAuth through a Github Account.

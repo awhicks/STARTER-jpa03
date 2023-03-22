@@ -230,7 +230,7 @@ In the text area, enter something like this, substituting your repo name and you
 
 <div style="font-family:monospace;">
 repo name: https://github.com/CS-3704-S23/Spring-Setup-chrislee123<br><br>
-on Render.com: https://jpa03-yourgithubid-chrislee123.onrender.com<br>
+on Render.com: https://jpa03-chrislee123.onrender.com<br>
 </div>
 
 Then, **and this is super important**, please make both of those URLs **clickable urls**.

@@ -45,22 +45,6 @@ Each of these three steps is explained in more detail below.
      * For Render, enter: `https://jpa03-yourgithubid.onrender.com/login/oauth2/code/github`
    * `Enable Device Flow` should be left unchecked
 
-4. Under `Authorized redirect URIs`, you'll need to click the `+ ADD URI` button twice to enter two addresses:
-
-   * For localhost, enter: `http://localhost:8080/login/oauth2/code/google`
-     - Note that this *must* be `http` not `https`
-   * For Heroku, enter: `https://myappname.herokuapp.com/login/oauth2/code/google`
-     - Note that you should substitute in *your* app name in place of `my-app-name`
-     - Note that this *must* be `https` not `http`
-
-   ![image](https://user-images.githubusercontent.com/1119017/149854295-8e1c4c63-929c-4706-972d-1962c644a40a.png)
-
-   Then click the blue `CREATE` button.
-
-   You will now see the client id and client secret values.
-
-   Keep this window open, since you'll need these values in the next step.
-
 ## Step 2: Copy `.env.SAMPLE` to `.env` and enter values
 
 In the frontend directory, use this command to copy `.env.SAMPLE` to `.env`.  Recall that you
@@ -93,51 +77,6 @@ ADMIN_GITHUB=awhicks,awh4kc
 ```
 
 With this done, you should be all set to run on localhost.
-
-For Heroku, there is one more step.
-
-## Step 3: Copying `.env` values to Heroku
-
-The easy way, using the Heroku CLI:
-
-(Note: if you don't access to the Heroku CLI, scroll down to "the tedious way")
-
-1.  Make sure you have the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install) installed.
-2.  Login with `heroku login`
-3.  Use this command, with the name of your app in place of `my-heroku-app`
-
-    ```
-    heroku config:set --app my-heroku-app  `cat .env`
-    ```
-
-    You should get output like this:
-
-    ```
-    Setting GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, ADMIN_GITHUB and restarting ⬢ demo-spring-react-example... done, v6
-    ```
-
-    You can check the values by visiting the `Settings` tab
-    in the Heroku Dashboard, and clicking `Reveal Config Vars`
-
-    If the command fails with the following error:
-
-    ```
-     is invalid. Must be in the format FOO=bar.
-    ```
-
-    Ensure that your `.env` file does not have any empty lines, then retry the command.
-
-The slightly more tedious way:
-
-1. In the Heroku Dashboard, visit the `Settings` tab
-   then click `Reveal Config Vars`.
-2. For each variable in `.env`, create a Config Var entry
-   with the corresponding name and value.
-
-   Be sure that you preserve case: if it's `CLIENT_SECRET`, you must use `CLIENT_SECRET` not `client_secret`.
-
-3. When finished, restart the application by going to the
-   `Deploy` tab and clicking `Deploy Branch`.
 
 ## Troubleshooting
 

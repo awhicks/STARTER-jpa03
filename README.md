@@ -129,6 +129,7 @@ On Render, you'll need to set the following configuration variable:
 * Create a `New Environment Group`
 * Name your group `jpa03-yourgithubid`
 * Add the following configuration variables and submit
+* Make sure to add the environment group to your repo in the `Environment` menu on the left
 
 | Environment Variable | Value | Notes |
 |-|-|-|
@@ -240,6 +241,7 @@ Then, **and this is super important**, please make both of those URLs **clickabl
 * (20 pts) Basic Logistics
   - Having a repo with the correct name in the correct organization with the starter code for this lab
   - The links on Canvas are clickable links (to make it easier to test your app)
+  - Link the repo, the running app on Render, the docs and docs-qa repos
   - Information of how you are communicating within your group (slack, discord, groupme, etc)
   - README has a link to your repo.
 * (20 pts) Having a running web app at <tt>https://CS-3704-S23-githubusername.onrender.com</tt>

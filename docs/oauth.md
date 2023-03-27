@@ -2,8 +2,6 @@
 
 This Spring Boot application is set up to use Google OAuth as it's authentication scheme.
 
-Setting this up on localhost requires the first two steps below; getting this to work on Heroku requires an additional third step.
-
 1. Obtaining a Github *client id* and *client secret*, which is
    done in [Github Developer Settings](https://github.com/settings/developers/).
 2. Configuring the `.env` file with these values.
@@ -98,9 +96,7 @@ For example, when I was getting this error message, it's because I put in this f
 
 ![image](https://user-images.githubusercontent.com/1119017/149856340-98acd5e4-8712-4723-a899-e3bf2f06d3fa.png)
 
-Rookie mistake!  I literally had `my-heroku-app` instead of `demo-spring-react-example`.
-
-Change it to the correct URI, click save.  Then go back to the URL for the home page of your app and refresh the page (you don't need to restart the Heroku backend; just refresh your browser page.)  Click login again, and you should get something like this:
+Change it to the correct URI, click save.  Then go back to the URL for the home page of your app and refresh the page. Click login again, and you should get something like this:
 
 
 <img src="https://user-images.githubusercontent.com/1119017/149856532-b1cda813-bd3f-4fd1-a79e-630e5929d7be.png" alt="Choose an Account" width="600" />

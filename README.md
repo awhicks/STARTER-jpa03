@@ -131,7 +131,7 @@ On Render, you'll need to set the following configuration variable:
 * Add the following configuration variables and submit
 
 | Environment Variable | Value | Notes |
-|-|-|
+|-|-|-|
 | ADMIN_GITHUB | awhicks,your-github-id | `awhicks,yourgithubid` |
 | GITHUB_CLIENT_ID | your-github-client-id | Obtain value from Github Developer Settings; you can also fill in `temp` as a temporary placeholder |
 | GITHUB_CLIENT_SECRET | your-github-client-SECRET | Obtain value from Github Developer Settings; you can also fill in `temp` as a temporary placeholder |
